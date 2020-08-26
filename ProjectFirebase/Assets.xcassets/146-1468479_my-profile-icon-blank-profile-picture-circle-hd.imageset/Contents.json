@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "146-1468479_my-profile-icon-blank-profile-picture-circle-hd-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "146-1468479_my-profile-icon-blank-profile-picture-circle-hd-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

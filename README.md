@@ -2,10 +2,10 @@
 An Instagram-like app using Firebase as it's database store
 
 1. Install Cocoapods by typing the following command in the terminal
-   sudo gem install cocoapods
+   -sudo gem install cocoapods
    
 2. Initiaze the pod file using the command
-   pod init
+   -pod init
    
 3. Give the following pods in the Pod file
   target 'ProjectFirebase' do
@@ -41,4 +41,4 @@ An Instagram-like app using Firebase as it's database store
     pod 'Firebase/Messaging'
     
 4. Now install the pods in the project
-   pod install
+   -pod install

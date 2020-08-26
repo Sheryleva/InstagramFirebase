@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
-    var usernames = [Users]()
+    var usernames = [String]()
     
     @IBOutlet weak var tblView: UITableView!
     
@@ -18,29 +18,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var arrFilter: [Users] = []
+    var arrFilter: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
        
         tblView.delegate = self
         tblView.dataSource = self
+        searchBar.delegate = self
         tblView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
          loadData()
-        
-        
-        searchBar.delegate = self
-        
-
     }
     
-    func loadData() -> [Users]  {
+    func loadData() -> [String]  {
         FirebaseManager.shared.getUsernames() { (snapshot) in
             print(snapshot.value)
             if let dict = snapshot.value as? [String: Any] {
                 let username = dict["Username"] as! String
-                print(username)
-                let users = Users(user: username)
-                self.usernames.append(users)
+                self.usernames.append(username)
                 print(self.usernames)
                 self.tblView.reloadData()
             }
@@ -55,17 +49,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
        
         print(usernames.count)
         return usernames.count
-    }
+          }
+        else{
         return arrFilter.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        let username = usernames[indexPath.row].Username
         DispatchQueue.main.async {
-             cell?.textLabel?.text = username
+            self.configureCell(cell: cell!, indexPath: indexPath)
         }
-        configureCell(cell: cell!, indexPath: indexPath)
+        
         return cell ?? UITableViewCell()
         
     }
@@ -104,7 +99,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     self.tblView.reloadData()
     } else {
         arrFilter = usernames.filter({ (text) -> Bool in
-    let tmp: NSString = "text"
+            let tmp: NSString = text as NSString
             let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
     return range.location != NSNotFound
     })
@@ -113,6 +108,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     } else {
     isSearch = true;
     }
+        print(arrFilter)
     self.tblView.reloadData()
     }
     }

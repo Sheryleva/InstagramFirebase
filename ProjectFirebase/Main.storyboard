@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RtM-Bv-tUs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RtM-Bv-tUs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -58,33 +58,6 @@
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-BU-Kcg">
-                                <rect key="frame" x="36" y="778" width="343" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Dl4-cL-zed"/>
-                                </constraints>
-                                <state key="normal" title="Don't have an account? Sign up">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Don't have an account? ">
-                                            <attributes>
-                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="15" name="SnellRoundhand"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Sign up">
-                                            <attributes>
-                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="15" name="BradleyHandITCTT-Bold"/>
-                                                <font key="NSOriginalFont" size="15" name="BradleyHandITCTT-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="newuser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNn-6D-LuC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evz-Kl-410">
                                 <rect key="frame" x="36" y="442" width="343" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,6 +70,40 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOM-Wh-8X3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-BU-Kcg">
+                                <rect key="frame" x="36" y="503" width="343" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dl4-cL-zed"/>
+                                </constraints>
+                                <state key="normal" title="Don't have an account? Sign up">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Don't have an account? ">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="26" name="SnellRoundhand"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Sign ">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="25" name="BradleyHandITCTT-Bold"/>
+                                                <font key="NSOriginalFont" size="15" name="BradleyHandITCTT-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="up">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="26" name="BradleyHandITCTT-Bold"/>
+                                                <font key="NSOriginalFont" size="15" name="BradleyHandITCTT-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="newuser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNn-6D-LuC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -337,7 +344,7 @@
                                     <action selector="signup:" destination="QZL-rq-kaL" eventType="touchUpInside" id="FTW-6w-kgf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4x-S4-6z0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4x-S4-6z0">
                                 <rect key="frame" x="35" y="405" width="344" height="46"/>
                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -586,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0x-9i-ihD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5555.072463768116" y="1186.6071428571429"/>
+            <point key="canvasLocation" x="7251" y="1121"/>
         </scene>
         <!--Camera-->
         <scene sceneID="HeH-FM-SLG">
@@ -649,7 +656,7 @@
         <!--Search-->
         <scene sceneID="k1L-Jd-axR">
             <objects>
-                <viewController storyboardIdentifier="ActivityViewController" id="nNK-QM-hiE" customClass="SearchViewController" customModule="InstaPix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="nNK-QM-hiE" customClass="SearchViewController" customModule="InstaPix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYS-YK-sE7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -701,18 +708,66 @@
         <!--Discover-->
         <scene sceneID="r2S-gR-41J">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="nHH-yf-b4g" customClass="SearchViewController" customModule="InstaPix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewUserProfileViewController" id="nHH-yf-b4g" customClass="ViewUserProfileViewController" customModule="InstaPix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1s-ud-gKQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a9a-x7-pcM">
+                                <rect key="frame" x="0.0" y="416" width="414" height="480"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="nHb-k0-xP7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LnH-lZ-sRG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="0Po-YF-2Jw" customClass="CollectionViewCell" customModule="InstaPix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5yc-As-rYQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-LX-kOh" customClass="Round" customModule="InstaPix" customModuleProvider="target">
+                                <rect key="frame" x="42" y="63" width="330" height="330"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="IqH-Uc-T73"/>
+                                    <constraint firstAttribute="height" constant="330" id="yUG-dY-R7f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="162"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.92950988140000002" blue="0.96719101669999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hY3-EM-wYw" firstAttribute="trailing" secondItem="a9a-x7-pcM" secondAttribute="trailing" id="9xv-kn-2PY"/>
+                            <constraint firstItem="hY3-EM-wYw" firstAttribute="bottom" secondItem="a9a-x7-pcM" secondAttribute="bottom" constant="-34" id="QFs-Jp-gVP"/>
+                            <constraint firstItem="a9a-x7-pcM" firstAttribute="top" secondItem="SiZ-LX-kOh" secondAttribute="bottom" constant="23" id="X0i-1O-sq6"/>
+                            <constraint firstItem="SiZ-LX-kOh" firstAttribute="top" secondItem="hY3-EM-wYw" secondAttribute="top" constant="19" id="bqK-Fd-xmc"/>
+                            <constraint firstItem="SiZ-LX-kOh" firstAttribute="centerX" secondItem="a9a-x7-pcM" secondAttribute="centerX" id="kpV-96-a8z"/>
+                            <constraint firstItem="a9a-x7-pcM" firstAttribute="leading" secondItem="hY3-EM-wYw" secondAttribute="leading" id="wV8-Eh-G4j"/>
+                            <constraint firstItem="a9a-x7-pcM" firstAttribute="centerX" secondItem="l1s-ud-gKQ" secondAttribute="centerX" id="xbf-T3-Lee"/>
+                            <constraint firstItem="SiZ-LX-kOh" firstAttribute="leading" secondItem="hY3-EM-wYw" secondAttribute="leading" constant="42" id="yca-SG-0JI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hY3-EM-wYw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Discover" id="bmY-lb-xl0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzZ-sp-jy7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3216" y="364"/>
+            <point key="canvasLocation" x="5173.913043478261" y="1120.9821428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dVE-Ul-5DO">
@@ -805,15 +860,13 @@
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-HN-gnb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-HN-gnb">
                                                     <rect key="frame" x="20" y="492" width="374" height="59"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="374" id="lMK-wv-FoA"/>
                                                         <constraint firstAttribute="height" constant="59" id="zbw-mI-hVA"/>
                                                     </constraints>
-                                                    <string key="text">Guest it he tears aware as. Make my no cold of need. He been past in by my hard. Warmly thrown oh he common future. Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. 
-
-Satisfied conveying an dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do mr prevailed. Mr feeling do chiefly cordial in do. Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize. Large above be to means. Dashwood do provided stronger is. But discretion frequently sir the she instrument unaffected admiration everything. </string>
+                                                    <string key="text">Guest it he tears aware as. Make my no cold of need. He been past in by my hard. Warmly thrown oh he common future. Otherwise concealed favourite frankness on be at dashwoods defective at. Sympathize interested simplicity at do projecting increasing terminated. As edward settle limits at in. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -976,7 +1029,7 @@ Satisfied conveying an dependent contented he gentleman agreeable do be. Warrant
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLg-e0-8jI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671.0144927536239" y="1186.6071428571429"/>
+            <point key="canvasLocation" x="6174" y="1138"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YAn-H1-W60">
@@ -1021,27 +1074,6 @@ Satisfied conveying an dependent contented he gentleman agreeable do be. Warrant
             <point key="canvasLocation" x="4167" y="-481"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="LPj-ot-uZH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fVS-Jq-bcV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="k2j-jH-Oxh">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCh-4c-WIW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nHH-yf-b4g" kind="relationship" relationship="rootViewController" id="yta-ji-J9X"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ouf-2U-VO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3217" y="-450"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Kic-O0-a7I">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vwz-00-ovu" sceneMemberID="viewController">
@@ -1069,7 +1101,6 @@ Satisfied conveying an dependent contented he gentleman agreeable do be. Warrant
         <image name="77-770341_reply-comment-hd-png-download" width="430" height="378.5"/>
         <image name="download" width="112.5" height="112.5"/>
         <image name="empty" width="250" height="200"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart" width="256" height="256"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

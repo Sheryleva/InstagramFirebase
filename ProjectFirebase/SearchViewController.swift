@@ -65,6 +65,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let st = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(identifier: "ViewUserProfileViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
         if(isSearch){
             cell.textLabel?.text = "\(arrFilter[indexPath.row])"
